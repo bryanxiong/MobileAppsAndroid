@@ -7,7 +7,9 @@
     android:padding="50dp"
     android:layout_width="match_parent"
     android:background="@drawable/background1x"
-    tools:showIn="@layout/activity_main">
+    tools:context=".Register">
+    <!--tools:showIn="@layout/activity_main" -
+    tools:context=".MainActivity">-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,7 +18,7 @@
         android:textSize="50sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:id="@+id/Register" />
 
     <EditText
         android:layout_width="match_parent"
@@ -24,7 +26,11 @@
         android:background="@drawable/box"
         android:hint="Username"
         android:gravity="center_horizontal"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:layout_below="@+id/Register"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Username"/>
 
     <EditText
         android:hint="Email Address"
@@ -34,9 +40,9 @@
         android:gravity="center_horizontal"
         android:inputType="textEmailAddress"
         android:id="@+id/Email"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/Username"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"/>
 
     <EditText
         android:hint="Password"
@@ -47,26 +53,18 @@
         android:inputType="textPassword"
         android:id="@+id/Password"
         android:layout_below="@+id/Email"
-        android:layout_alignStart="@+id/btLogin"
+        android:layout_alignStart="@+id/btRegister"
         android:layout_marginTop="24dp" />
 
     <Button
-        android:id="@+id/btLogin"
-        android:text="Login"
+        android:id="@+id/btRegister"
+        android:text="Register"
         android:background="@drawable/box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Password"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="24dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/facebookbutton3x"
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/btLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
 
 </RelativeLayout>
