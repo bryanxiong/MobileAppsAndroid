@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    android:padding="50dp"
     android:layout_width="match_parent"
     android:background="@drawable/background1x"
+    tools:context=".MainActivity">
+    <!--
     tools:showIn="@layout/activity_main">
-
+    -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +17,8 @@
         android:textSize="50sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:hint="Email Address"
@@ -28,7 +30,9 @@
         android:id="@+id/Email"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
 
     <EditText
         android:hint="Password"
@@ -40,7 +44,8 @@
         android:id="@+id/Password"
         android:layout_below="@+id/Email"
         android:layout_alignStart="@+id/btLogin"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="50dp"/>
 
     <Button
         android:id="@+id/btLogin"
@@ -49,16 +54,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Password"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Forgot Password?"
+        android:id="@+id/forgotPassword"
+        android:onClick=""
+        android:layout_below="@+id/btLogin"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/facebookbutton3x"
-        android:id="@+id/imageButton"
+        android:layout_height="75dp"
+        android:src="@drawable/facebookbutton2x"
+        android:id="@+id/btFacebook"
         android:layout_below="@+id/btLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="25dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btFacebook"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgPageCircle"
+            android:src="@drawable/pagecircles2x"
+            android:layout_above="@+id/imgLogin"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomloginwhite1x"
+            android:id="@+id/imgLogin"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomregisterblack1x"
+            android:id="@+id/imgRegister"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"/>
+    </RelativeLayout>
 
 </RelativeLayout>

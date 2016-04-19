@@ -5,9 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-/**
- * Created by I Ninja on 4/18/2016.
- */
 public class Register extends AppCompatActivity {
 
     @Override
