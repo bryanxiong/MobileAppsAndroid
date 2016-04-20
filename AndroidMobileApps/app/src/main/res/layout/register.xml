@@ -21,9 +21,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/box"
+        android:background="@drawable/textbackground1x"
         android:hint="Username"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:inputType="text"
         android:layout_below="@+id/Register"
         android:layout_alignParentEnd="true"
@@ -37,8 +37,8 @@
         android:hint="Email Address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/box"
-        android:gravity="center_horizontal"
+        android:background="@drawable/textbackground1x"
+        android:gravity="center"
         android:inputType="textEmailAddress"
         android:id="@+id/Email"
         android:layout_below="@+id/Username"
@@ -51,8 +51,8 @@
         android:hint="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/box"
-        android:gravity="center_horizontal"
+        android:background="@drawable/textbackground1x"
+        android:gravity="center"
         android:inputType="textPassword"
         android:id="@+id/Password"
         android:layout_below="@+id/Email"
@@ -64,8 +64,8 @@
         android:hint="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/box"
-        android:gravity="center_horizontal"
+        android:background="@drawable/textbackground1x"
+        android:gravity="center"
         android:inputType="textPassword"
         android:id="@+id/ConfirmPassword"
         android:layout_below="@+id/Password"
@@ -76,7 +76,7 @@
     <Button
         android:id="@+id/btRegister"
         android:text="Register"
-        android:background="@drawable/box"
+        android:background="@drawable/loginappbutton1x"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ConfirmPassword"
@@ -86,43 +86,12 @@
         android:layout_marginRight="50dp"/>
 
     <ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/imgPageCircle"
-    android:src="@drawable/g60801x"
-    android:layout_above="@+id/linearLayoutRegister"
-    android:layout_centerHorizontal="true" />
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayoutRegister"
-        android:weightSum="2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bottomloginwhite1x"
-            android:id="@+id/imgLogin"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bottomregisterblack1x"
-            android:id="@+id/imgRegister"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
+        android:layout_width="73dp"
+        android:layout_height="33dp"
+        android:id="@+id/imgPageCircle"
+        android:src="@drawable/g60802x"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
 
 
 </RelativeLayout>
