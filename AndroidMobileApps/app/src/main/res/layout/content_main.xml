@@ -81,23 +81,24 @@
         android:adjustViewBounds="true"/>
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgPageCircle"
+        android:src="@drawable/pagecircles2x"
+        android:layout_above="@+id/linearLayoutContent"
+        android:layout_centerHorizontal="true" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btFacebook"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/linearLayoutContent"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgPageCircle"
-            android:src="@drawable/pagecircles2x"
-            android:layout_above="@+id/imgLogin"
-            android:layout_centerHorizontal="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@drawable/bottomloginwhite1x"
             android:id="@+id/imgLogin"
@@ -108,7 +109,7 @@
             android:layout_weight="1"/>
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@drawable/bottomregisterblack1x"
             android:id="@+id/imgRegister"
@@ -116,6 +117,6 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"/>
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

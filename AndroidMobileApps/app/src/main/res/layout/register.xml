@@ -86,33 +86,43 @@
         android:layout_marginRight="50dp"/>
 
     <ImageView
-        android:layout_width="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imgPageCircle"
+    android:src="@drawable/g60801x"
+    android:layout_above="@+id/linearLayoutRegister"
+    android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/bottomloginwhite1x"
-        android:id="@+id/imgLogin"
-        android:layout_alignBottom="@+id/btFacebook"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="false"
+        android:id="@+id/linearLayoutRegister"
+        android:weightSum="2"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentStart="true">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bottomregisterblack1x"
-        android:id="@+id/imgRegister"
-        android:layout_alignBottom="@+id/btFacebook"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomloginwhite1x"
+            android:id="@+id/imgLogin"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imgPageCircle"
-        android:src="@drawable/g60802x"
-        android:layout_above="@+id/imgLogin"
-        android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomregisterblack1x"
+            android:id="@+id/imgRegister"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
 
 
 </RelativeLayout>
