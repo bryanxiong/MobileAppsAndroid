@@ -1,81 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/background1x">
+    android:background="@drawable/graybackground3x"
+    android:weightSum="3">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="center_horizontal"
-        android:text="My Profile"/>
+        android:background="@drawable/profileback1x"
+        android:layout_weight="3">
 
-    <TextView
-        android:id="@+id/myPosts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:text="My Posts"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="My Profile"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/myProfile"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/savedItems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:text="Saved Items"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myProfile"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/messagespicture2x"
+            android:id="@+id/profilePicture"/>
 
-    <TextView
-        android:id="@+id/savedSearches"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:text="Saved Searches"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilePicture"
+            android:layout_centerHorizontal="true"
+            android:text="Derik Oliver"
+            android:id="@+id/profileName"
+            android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/myFeedbacks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:text="My Feedback"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/profileName"
+            android:text="Junior at Whitworth University"
+            android:id="@+id/profileLocation"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/profileLocation"
+            android:text="Spokane, Washington"
+            android:id="@+id/location"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/linearLists"
+            android:src="@drawable/betweenbar1x"/>
+
+        <TextView
+            android:id="@+id/myPosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="My Posts"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/betweenbar1x"/>
+
+        <TextView
+            android:id="@+id/savedItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="Saved Items"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/betweenbar1x"/>
+
+        <TextView
+            android:id="@+id/savedSearches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="Saved Searches"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/betweenbar1x"/>
+
+        <TextView
+            android:id="@+id/myFeedbacks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="My Feedback"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
+        android:background="@drawable/bottombar1x"
         android:gravity="center"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:weightSum="3">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_weight="1"
-            android:background="@drawable/graysearchicon"/>
-
-
-        <Button
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/graymailicon2x"/>
+            android:layout_margin="15dp">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/graysearchicon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/graymailicon2x"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/blueprofileicon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
 
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:background="@drawable/blueprofileicon"/>
 
-
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
